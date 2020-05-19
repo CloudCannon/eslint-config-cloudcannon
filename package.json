@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-cloudcannon",
+  "version": "1.0.0-rc1",
+  "description": "Eslint config for CloudCannon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-autofix": "eslint --fix .",
+    "lint-code": "eslint  .",
+    "lint": "npm run lint-autofix && npm run lint-code"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCannon/eslint-config-cloudcannon.git"
+  },
+  "keywords": [
+    "lint",
+    "javascript",
+    "cloudcannon",
+    "eslint"
+  ],
+  "author": "Jonatah Benatti",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-mocha": "^7.0.0"
+  }
+}
