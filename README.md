@@ -11,7 +11,7 @@ Install packages:
 $ npm install @cloudcannon/eslint-config-cloudcannon eslint eslint-plugin-import eslint-eslint-plugin-mocha --save-dev
 ```
 
-Create a new file on the root directory with the following content
+Create a new file on the root directory name ".eslintrc.json" with the following content:
 
 ```
 {
