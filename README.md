@@ -8,7 +8,7 @@ Welcome to the CloudCannon ESLint config. This will ensure your code follows the
 Install packages:
 
 ```
-$ npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-eslint-plugin-mocha --save-dev
+$ npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha --save-dev
 ```
 
 Create a new file on the root directory name ".eslintrc.json" with the following content:
