@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cloudcannon",
-  "version": "1.0.0-rc2",
+  "version": "1.0.0-rc3",
   "description": "Eslint config for CloudCannon",
   "main": "index.js",
   "scripts": {
