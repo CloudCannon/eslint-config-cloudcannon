@@ -1,9 +1,5 @@
 {
     "extends": [
         "./index.js"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    }
+    ]
 }
