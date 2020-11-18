@@ -30,9 +30,9 @@ async function run() {
 		pkg.scripts = { ...newScripts, ...pkg.scripts };
 	}
 
-	fs.writeFileSync('package.json', JSON.stringify(prettier.format(pkg, { parser: 'json' })));
+	fs.writeFileSync('package.json', prettier.format(JSON.stringify(pkg), { parser: 'json' }));
 
-	console.log('Done!')
+	console.log('Done!');
 }
 
 run();

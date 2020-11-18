@@ -80,7 +80,7 @@ function run() {
                     else {
                         pkg.scripts = __assign(__assign({}, newScripts), pkg.scripts);
                     }
-                    fs_1.default.writeFileSync('package.json', JSON.stringify(prettier_1.default.format(pkg, { parser: 'json' })));
+                    fs_1.default.writeFileSync('package.json', prettier_1.default.format(JSON.stringify(pkg), { parser: 'json' }));
                     console.log('Done!');
                     return [2 /*return*/];
             }
