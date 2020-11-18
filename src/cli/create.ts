@@ -1,6 +1,5 @@
 import NodeExtended from 'node-extended';
 import fs from 'fs';
-import { pbkdf2Sync } from 'crypto';
 
 // Sets up eslint in a new project
 async function run() {
