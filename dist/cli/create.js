@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 "use strict";
-// #!/usr/bin/env node
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -54,6 +53,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_extended_1 = __importDefault(require("node-extended"));
 var fs_1 = __importDefault(require("fs"));
+var prettier_1 = __importDefault(require("prettier"));
 // Sets up eslint in a new project
 function run() {
     return __awaiter(this, void 0, void 0, function () {
@@ -80,7 +80,8 @@ function run() {
                     else {
                         pkg.scripts = __assign(__assign({}, newScripts), pkg.scripts);
                     }
-                    fs_1.default.writeFileSync('package.json', JSON.stringify(pkg));
+                    fs_1.default.writeFileSync('package.json', JSON.stringify(prettier_1.default.format(pkg, { parser: 'json' })));
+                    console.log('Done!');
                     return [2 /*return*/];
             }
         });
