@@ -3,7 +3,7 @@
   "version": "1.0.0-rc5",
   "description": "Eslint config for CloudCannon",
   "main": "dist/index.js",
-  "bin": "./dist/cli/create.js",
+  "bin": "node ./dist/cli/create.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc --watch",
