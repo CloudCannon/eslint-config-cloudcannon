@@ -27,11 +27,13 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^14.14.8",
+    "@types/prettier": "^2.1.5",
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-mocha": "^7.0.0",
-    "node-extended": "^0.1.0"
+    "node-extended": "^0.1.0",
+    "prettier": "^2.1.2"
   },
   "devDependencies": {
     "typescript": "^4.0.5"

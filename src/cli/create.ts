@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// #!/usr/bin/env node
 
 import NodeExtended from 'node-extended';
 import fs from 'fs';
+import prettier from 'prettier';
 
 // Sets up eslint in a new project
 async function run() {
@@ -30,7 +30,9 @@ async function run() {
 		pkg.scripts = { ...newScripts, ...pkg.scripts };
 	}
 
-	fs.writeFileSync('package.json', JSON.stringify(pkg));
+	fs.writeFileSync('package.json', JSON.stringify(prettier.format(pkg, { parser: 'json' })));
+
+	console.log('Done!')
 }
 
 run();
