@@ -4,6 +4,7 @@ import NodeExtended from 'node-extended';
 import fs from 'fs';
 import prettier from 'prettier';
 
+
 // Sets up eslint in a new project
 async function run() {
 	await NodeExtended.execute(
