@@ -60,7 +60,7 @@ function run() {
         var pkg, newScripts;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, node_extended_1.default.execute('npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha --save-dev')];
+                case 0: return [4 /*yield*/, node_extended_1.default.execute('npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha eslint-plugin-jest --save-dev')];
                 case 1:
                     _a.sent();
                     fs_1.default.writeFileSync('.eslintrc.json', JSON.stringify({
@@ -70,9 +70,7 @@ function run() {
                     }));
                     pkg = JSON.parse(fs_1.default.readFileSync('package.json').toString());
                     newScripts = {
-                        'lint-autofix': 'eslint --fix lib/** config/** test/** application.js',
-                        'lint-code': 'eslint  lib/** config/** test/** application.js',
-                        lint: 'npm run lint-autofix && npm run lint-code'
+                        lint: 'eslint src/**/*.js --fix'
                     };
                     if (!pkg.scripts) {
                         pkg.scripts = __assign({}, newScripts);

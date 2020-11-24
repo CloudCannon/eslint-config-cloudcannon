@@ -21,9 +21,7 @@ async function run() {
 	// Write scripts to package.json
 	const pkg = JSON.parse(fs.readFileSync('package.json').toString());
 	const newScripts = {
-		'lint-autofix': 'eslint --fix lib/** config/** test/** application.js',
-		'lint-code': 'eslint  lib/** config/** test/** application.js',
-		lint: 'npm run lint-autofix && npm run lint-code'
+		lint: 'eslint src/**/*.js --fix'
 	};
 	if (!pkg.scripts) {
 		pkg.scripts = { ...newScripts };

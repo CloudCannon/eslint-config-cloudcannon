@@ -4,5 +4,6 @@ module.exports = {
         'eslint-config-airbnb-base',
         require.resolve('./rules/default')
     ],
+    plugins: ['jest'],
     rules: {}
 };
