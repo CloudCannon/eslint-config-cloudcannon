@@ -4,10 +4,11 @@ import NodeExtended from 'node-extended';
 import fs from 'fs';
 import prettier from 'prettier';
 
+
 // Sets up eslint in a new project
 async function run() {
 	await NodeExtended.execute(
-		'npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha --save-dev'
+		'npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha eslint-plugin-jest --save-dev'
 	);
 	fs.writeFileSync('.eslintrc.json', JSON.stringify(
 		{
@@ -20,9 +21,7 @@ async function run() {
 	// Write scripts to package.json
 	const pkg = JSON.parse(fs.readFileSync('package.json').toString());
 	const newScripts = {
-		'lint-autofix': 'eslint --fix lib/** config/** test/** application.js',
-		'lint-code': 'eslint  lib/** config/** test/** application.js',
-		lint: 'npm run lint-autofix && npm run lint-code'
+		lint: 'eslint src/**/*.js --fix'
 	};
 	if (!pkg.scripts) {
 		pkg.scripts = { ...newScripts };
