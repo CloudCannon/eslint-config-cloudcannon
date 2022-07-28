@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
-import NodeExtended from 'node-extended';
+import { exec } from 'child_process';
 import fs from 'fs';
-import prettier from 'prettier';
 
 // Sets up eslint in a new project
 async function run() {
-	await NodeExtended.execute(
-		'npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha --save-dev'
-	);
+	await exec('npm install eslint-config-cloudcannon eslint eslint-plugin-import eslint-plugin-mocha --save-dev');
 	fs.writeFileSync('.eslintrc.json', JSON.stringify(
 		{
 			extends: [
@@ -30,7 +27,7 @@ async function run() {
 		pkg.scripts = { ...newScripts, ...pkg.scripts };
 	}
 
-	fs.writeFileSync('package.json', prettier.format(JSON.stringify(pkg), { parser: 'json' }));
+	fs.writeFileSync('package.json', JSON.stringify(pkg, null, '\t'));
 
 	console.log('Done!');
 }

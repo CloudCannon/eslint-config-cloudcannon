@@ -33,7 +33,7 @@ module.exports = {
 		'prefer-arrow-callback': ['error', { allowNamedFunctions: true, allowUnboundThis: true }],
 		'no-bitwise': ['error', { int32Hint: true }],
 
-		"no-restricted-imports": ["error", { "paths": ["underscore", "logentries", "le_node"] }],
-		"no-restricted-modules": ["error", { "paths": ["underscore", "logentries", "le_node"] }]
+		'no-restricted-imports': ['error', { paths: ['underscore', 'logentries', 'le_node'] }],
+		'no-restricted-modules': ['error', { paths: ['underscore', 'logentries', 'le_node'] }]
 	}
 };

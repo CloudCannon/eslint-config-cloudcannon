@@ -1,14 +1,11 @@
 {
   "name": "eslint-config-cloudcannon",
-  "version": "1.0.0-rc5",
+  "version": "1.0.0",
   "description": "Eslint config for CloudCannon",
-  "main": "dist/index.js",
-  "bin": "./dist/cli/create.js",
+  "main": "src/index.js",
+  "bin": "./src/cli/create.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc --watch",
-    "build": "tsc",
-    "preversion": "npm run build",
     "lint-autofix": "eslint --fix .",
     "lint-code": "eslint  .",
     "lint": "npm run lint-autofix && npm run lint-code"
@@ -26,14 +23,10 @@
   "author": "Jonatah Benatti",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^14.14.8",
-    "@types/prettier": "^2.1.5",
     "eslint": "^7.0.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-mocha": "^7.0.0",
-    "node-extended": "^0.1.0",
-    "prettier": "^2.1.2"
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0"
   },
   "devDependencies": {
     "typescript": "^4.0.5"
