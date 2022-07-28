@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-cloudcannon",
+	"name": "@cloudcannon/eslint-config-cloudcannon",
   "version": "1.0.0",
   "description": "Eslint config for CloudCannon",
   "main": "src/index.js",
@@ -14,12 +14,22 @@
     "type": "git",
     "url": "git+https://github.com/CloudCannon/eslint-config-cloudcannon.git"
   },
+	"bugs": {
+		"url": "https://github.com/CloudCannon/eslint-config-cloudcannon/issues",
+		"email": "support@cloudcannon.com"
+	},
   "keywords": [
     "lint",
     "javascript",
     "cloudcannon",
     "eslint"
   ],
+	"files": [
+		"src/**/*.js"
+	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
   "author": "Jonatah Benatti",
   "license": "MIT",
   "dependencies": {
